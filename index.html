@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <meta charset="UTF-8">
+  <title>CWSジェネレーター</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/angular.min.js"></script>
+  <script src="./js/script.js"></script>
+  <style>
+
+  </style>
+</head>
+<body ng-init="link='未設定'; h1='未設定'; p_1='未設定'; p_2='未設定'; under_anchor_text='未設定'">
+  <div id="wrapper">
+    <div id="content">
+    <h1>CWSジェネレーター</h1>
+    <div class="layer_1">
+    <div id="input_box">
+      <h2>入力欄</h2>
+      <label for="">リンク先を入力：</label>
+      <input type="text" size="50" ng-model="link"><br><br>
+      <label for="">見出しを入力：</label>
+      <input type="text" size="50" ng-model="h1"><br><br>
+      <label for="">文章①を入力：</label>
+      <textarea name="name" rows="8" cols="60" ng-model="p_1"></textarea><br><br>
+      <label for="">文章②を入力：</label>
+      <textarea name="name" rows="8" cols="60" ng-model="p_2"></textarea><br><br>
+      <label for="">文章下部のアンカーテキストを入力：</label><br>
+      <input type="text" size="50" ng-model="under_anchor_text"><br><br>
+    </div>
+    </div>
+    <div id="txt_box">
+      <xmp>
+        <h1>{{h1}}</h1>
+        <p>{{p_1}}</p>
+        <p>{{p_2}}</p>
+        <a href="{{link}}">{{under_anchor_text}}</a>
+      </xmp>
+    </div>
+    </div>
+    <footer>
+      ©oshibu.kom
+    </footer>
+
+  </div>
+</body>
+</html>
